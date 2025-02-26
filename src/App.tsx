@@ -64,13 +64,19 @@ function App() {
         <h3 className="text-2xl my-4">Style variants</h3>
         {variants.map((variant) => (
           <div key={variant} className="flex gap-4 my-4">
+            <Moodlet
+              type='ICONL'
+              variant={variant}
+              readonly
+              disabled
+            />
             {[true, false].map((value, idx) => (
               <Moodlet
                 key={`${variant}-${idx}`}
                 type='ICONL'
                 variant={variant}
                 readonly={value}
-            />
+              />
             ))}
           </div>
         ))}
